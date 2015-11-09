@@ -1,0 +1,70 @@
+/*var revealed = (this.props.square.explored) ? this.props.square.adjacentBombCount : "_";
+var flagged = (this.props.square.flagged) ? "⚑" : revealed;
+var bombed = (this.props.square.bombed && revealed) ? "💣" : flagged;
+*/
+
+html, body, div, h1, span {
+  border: 0;
+  margin: 0;
+  padding: 0;
+
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  text-decoration: inherit;
+
+
+}
+
+body {
+  font-family: sans-serif;
+
+}
+
+ul {
+  list-style: none
+}
+
+.group:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+
+#game {
+  display: block;
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  left: calc(50% - 300px)
+
+}
+.tile {
+  display: block;
+  float:left;
+  width: 58px;
+  height: 58px;
+  background: transparent;
+  border-style: outset;
+}
+
+.revealed:before {
+  content: attr("data-bombs");
+  display: block;
+  position: relative;
+  background: blue;
+  border: 1px solid black;
+  border-style: inset;
+}
+
+.unrevealed:before {
+  content: "__";
+  display: block;
+
+}
+
+.flagged:before {
+  content: "F"
+  display:block;
+}
