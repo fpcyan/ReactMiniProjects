@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script src="https://fb.me/react-0.13.3.js" charset="utf-8"></script>
+    <script src="https://fb.me/JSXTransformer-0.13.3.js" charset="utf-8"></script>
+    <script type="text/jsx" src="./widgets.js"></script>
+
+    </script>
+    <title>widgetsss</title>
+  </head>
+  <body>
+    <div id="auto-complete"></div>
+
+    <script type="text/jsx">
+      React.render(
+        <AutoComplete items={['Fiona Conn', 'Jimmy Zeng', 'Solar Olegubufola', 'Jamin Cheung', 'Douglas Moore']} />,
+          document.getElementById("auto-complete")
+      )
+    </script>
+
+  </body>
+</html>

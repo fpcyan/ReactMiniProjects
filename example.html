@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://fb.me/react-0.13.3.js"></script>
+    <script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
+
+    <meta charset="utf-8">
+    <title>test</title>
+  </head>
+  <body>
+
+    <div id="like-button"> </div>
+
+    <script type="text/jsx">
+      var Like = React.createClass({
+        getInitialState: function () {
+          return {liked: false};
+        },
+        handleChange: function (e) {
+          this.setState({liked: !this.state.liked})
+        },
+        render: function () {
+          var text = this.state.liked ? 'Liked' : 'Have not liked';
+          return (
+            <p onClick={this.handleChange}> {text} this. Click to toggle </p>
+          )
+        }
+      })
+
+      React.render(
+        <Like />,
+        document.getElementById('like-button')
+      )
+
+
+    </script>
+  </body>
+</html>
