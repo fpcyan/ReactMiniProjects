@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <script src="https://fb.me/react-0.13.3.js" charset="utf-8"></script>
     <script src="https://fb.me/JSXTransformer-0.13.3.js" charset="utf-8"></script>
-    <script type="text/jsx" src="./widgets.js"></script>
+    <script type="text/jsx" src="./auto-complete.js"></script>
+    <script type="text/jsx" src="./weather-clock.js"></script>
 
     </script>
     <title>widgetsss</title>
@@ -18,6 +19,18 @@
           document.getElementById("auto-complete")
       )
     </script>
+    <div id="weather-clock">    </div>
+
+    <script type="text/jsx">
+      React.render(
+        <WeatherClock />,
+        document.getElementById('weather-clock')
+      )
+
+    </script>
+
+
+
 
   </body>
 </html>

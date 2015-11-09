@@ -6,11 +6,14 @@ var AutoComplete = React.createClass({
 
       this.setState( { searchString: e.target.value });
     },
+    handleClick: function(l) {
+      this.setState( { searchString: l})
+    },
     render: function() {
 
       var libraries = this.props.items,
-        searchString = this.state.searchString.trim().toLowerCase();
-
+        searchString = this.state.searchString.trim().toLowerCase(),
+        that = this;
       if (searchString.length > 0) {
         libraries = libraries.filter( function (l) {
           return l.toLowerCase().match( searchString );
@@ -26,8 +29,8 @@ var AutoComplete = React.createClass({
 
           <ul>
             {
-              libraries.map( function (l) {
-                return <li> {l} </li>
+              libraries.map( function (l, idx) {
+                return <li key={idx} onClick={that.handleClick.bind(that, l)}> {l} </li>
 
             })
 
