@@ -6,8 +6,19 @@
     <script src="https://fb.me/JSXTransformer-0.13.3.js" charset="utf-8"></script>
     <script type="text/jsx" src="./auto-complete.js"></script>
     <script type="text/jsx" src="./weather-clock.js"></script>
+    <script type="text/jsx" src="./tabs.js"></script>
 
     </script>
+    <style>
+      ul {
+        list-style: none;
+      }
+      .active {
+        font-weight: bold;
+      }
+
+
+    </style>
     <title>widgetsss</title>
   </head>
   <body>
@@ -23,13 +34,29 @@
 
     <script type="text/jsx">
       React.render(
-        <WeatherClock apiKey="74698c7d230b433ea263029c8e7eea5f" />,
+        <WeatherClock />,
         document.getElementById('weather-clock')
       )
 
     </script>
 
+    <div id="tabs"></div>
 
+    <script type="text/jsx">
+      var data = [
+        {title: "Xin Zhao", content: "I never leave my friends behind."},
+        {title: "Vayne", content: "I smell black magicks."},
+        {title: "Veigar", content: "Is that a short joke???"},
+        {title: "Tristana", content: "Is that a rocket in your pocket!"},
+        {title: "Ziggs", content: "Ahahaha AHAHAH AHAHAH!"},
+      ]
+
+      React.render(
+        <TabContent data={data} />,
+        document.getElementById('tabs')
+      )
+
+    </script>
 
 
   </body>
